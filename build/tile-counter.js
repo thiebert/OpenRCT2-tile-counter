@@ -2749,14 +2749,12 @@ function GetRaisedTileCount() {
     var count = 0;
     for (var x = 0; x < map.size.x; x++) {
         for (var y = 0; y < map.size.y; y++) {
-            console.log(x + ', ' + y);
             var tile = map.getTile(x, y);
             if (getSurface(tile).baseHeight > 2) {
                 count++;
             }
         }
     }
-    console.log("raised complete");
     return count;
 }
 
@@ -2772,7 +2770,6 @@ function GetBlackedTileCount() {
         }
     }
 
-    console.log("blacked complete");
     return x * x - count;
 }
 
@@ -2788,7 +2785,6 @@ function GetUnbuiltTileCount() {
         }
     }
 
-    console.log("unbuilt complete");
     return x * x - count;
 }
 
